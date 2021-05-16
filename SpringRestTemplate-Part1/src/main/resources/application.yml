@@ -1,0 +1,22 @@
+server:
+  port: 1234
+  
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+    password: manager
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    show-sql: true
+    
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:2020/
+  application:
+    name: AsishRest

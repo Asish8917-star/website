@@ -1,0 +1,24 @@
+server:
+  port: 2323
+ 
+spring:
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:2020/
+  application:
+    name: asish
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:asish
+    username: system
+    password: manager
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  banner:
+    location: classpath:asish.txt
